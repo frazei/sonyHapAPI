@@ -1,9 +1,9 @@
 _id: req_862f761a43da4924a2fd5064864ecd48
 type: Request
 parentId: fld_be0cd8fd5d814234ab568a0b0c63ae60
-modified: 1658836908027
+modified: 1658838599989
 created: 1658828814163
-url: http://{{ _.ipaddr }}:{{ _.port }}/sony/audio
+url: "{{ _.scheme }}://{{ _.host }}/sony/audio"
 name: mute on
 description: >-
   The current power status of the device, or the status to set.

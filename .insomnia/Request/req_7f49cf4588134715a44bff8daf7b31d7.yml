@@ -1,9 +1,9 @@
 _id: req_7f49cf4588134715a44bff8daf7b31d7
 type: Request
 parentId: fld_774d5819da014eff908ebcb130dfcd95
-modified: 1658836126228
+modified: 1658838615402
 created: 1658826689954
-url: http://{{ _.ipaddr }}:{{ _.port }}/sony/system
+url: "{{ _.scheme }}://{{ _.host }}/sony/system"
 name: get power status
 description: >
   ## status

@@ -1,7 +1,7 @@
 _id: spc_2724eeb985794351a9683eacbd2f88d7
 type: ApiSpec
 parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
-modified: 1658836949000
+modified: 1658838639070
 created: 1658480071067
 fileName: API Sony HAP-S1
 contents: >-
@@ -11,6 +11,27 @@ contents: >-
     description: "Sony HAP-S1 is a High-Resolution Audio HDD player. There is also a variant called HAP-Z1ES."
     version: 1.0.0
     title: Sony HAP-S1 API
+
+  externalDocs:
+    description: "SONY developer's guide"
+    url: https://developer.sony.com/develop/audio-control-api/documentation/api-reference
+
+  servers:
+    - url: "{scheme}://{host}:{port}"
+      description: "HAP-S1"
+      variables:
+        scheme:
+          enum:
+            - "http"
+            - "https"
+          default: "http"
+          description: "protocol"
+        host:
+          default: ""
+          description: "ip address"
+        port:
+          default: "60200"
+          description: "port number"
 
   tags:
     - name: API

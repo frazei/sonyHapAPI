@@ -1,9 +1,9 @@
 _id: req_591ec9b4cad44f1ca8ddc3c8e76ffd50
 type: Request
 parentId: fld_a987428f3a464c23bb835b982d0cedb5
-modified: 1658829523430
+modified: 1658838609632
 created: 1658829399861
-url: http://{{ _.ipaddr }}:{{ _.port }}/sony/avContent
+url: "{{ _.scheme }}://{{ _.host }}/sony/avContent"
 name: playing info
 description: >-
   The current power status of the device, or the status to set.
