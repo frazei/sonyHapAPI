@@ -1,29 +1,28 @@
 _id: req_wrk_7407430e3d0e437fb8bbb3b0b814eb92423f5e41
 type: Request
-parentId: fld_wrk_7407430e3d0e437fb8bbb3b0b814eb92d93d10ff
-modified: 1658836257691
-created: 1658836257691
+parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
+modified: 1658844342714
+created: 1658839463431
 url: "{{ base_url }}/sony/audio"
 name: /sony/audio
 description: ""
 method: POST
-body: {}
-parameters:
-  - name: method
-    disabled: false
-    value: string
-  - name: id
-    disabled: false
-    value: "0"
-  - name: params
-    disabled: false
-    value: ""
-  - name: version
-    disabled: false
-    value: string
-headers: []
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "method": "string",
+      "id": "1",
+      "params": "string",
+      "version": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_1858ce772fa74d33a468f374ac45be21
 authentication: {}
-metaSortKey: -1658836257691
+metaSortKey: -1658839463431
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

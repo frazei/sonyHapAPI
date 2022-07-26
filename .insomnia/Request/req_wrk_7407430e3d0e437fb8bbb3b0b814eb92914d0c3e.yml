@@ -1,29 +1,28 @@
 _id: req_wrk_7407430e3d0e437fb8bbb3b0b814eb92914d0c3e
 type: Request
-parentId: fld_wrk_7407430e3d0e437fb8bbb3b0b814eb92d93d10ff
-modified: 1658836257690
-created: 1658836257690
+parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
+modified: 1658844343697
+created: 1658839463428
 url: "{{ base_url }}/sony/avContent"
 name: /sony/avContent
 description: ""
 method: POST
-body: {}
-parameters:
-  - name: method
-    disabled: false
-    value: string
-  - name: id
-    disabled: false
-    value: "0"
-  - name: params
-    disabled: false
-    value: ""
-  - name: version
-    disabled: false
-    value: string
-headers: []
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "method": "string",
+      "id": "1",
+      "params": "string",
+      "version": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5d4a01c274ff49dd9f94d3b93c63a92d
 authentication: {}
-metaSortKey: -1658836257690
+metaSortKey: -1658839463428
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

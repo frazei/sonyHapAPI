@@ -1,11 +1,12 @@
 _id: env_env_de90e168d2582e89cd97ad7aa02d976e9e0d0464_sub
 type: Environment
 parentId: env_de90e168d2582e89cd97ad7aa02d976e9e0d0464
-modified: 1658838576544
+modified: 1658839779155
 created: 1658838497033
 name: OpenAPI env
 data:
-  scheme: http
+  scheme:
+    - http
   base_path: ""
   host: 192.168.1.69:60200
 dataPropertyOrder:

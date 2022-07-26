@@ -1,11 +1,11 @@
 _id: spc_2724eeb985794351a9683eacbd2f88d7
 type: ApiSpec
 parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
-modified: 1658838639070
+modified: 1658844349672
 created: 1658480071067
 fileName: API Sony HAP-S1
-contents: >-
-  openapi: 3.0.0
+contents: >
+  openapi: 3.0.3
 
   info:
     description: "Sony HAP-S1 is a High-Resolution Audio HDD player. There is also a variant called HAP-Z1ES."
@@ -27,111 +27,79 @@ contents: >-
           default: "http"
           description: "protocol"
         host:
-          default: ""
+          default: "192.168.1.69"
           description: "ip address"
         port:
           default: "60200"
           description: "port number"
 
   tags:
-    - name: API
+    - name: "Volume"
+      description: ""
+    - name: "Music"
+      description: ""
+    - name: "Power"
       description: ""
 
   paths:
     /sony/system:
+      summary: ""
+      description: ""
       post:
-        tags:
-          - API
-        parameters:
-          - name: method
-            description: "allowed values are.."
-            in: query
-            required: true
-            schema:
-              type: string
-          - name: id
-            description: "id"
-            in: query
-            required: true
-            schema:
-              type: integer
-          - name: params
-            description: "params"
-            in: query
-            required: true
-            schema:
-              type: array
-          - name: version
-            description: ""
-            in: query
-            required: true
-            schema:
-              type: string
+        description: ""
+        requestBody:
+          description: ""
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/default"
         responses:
           "400":
             description: Invalid
     /sony/audio:
       post:
-        tags:
-            - API
-        parameters:
-          - name: method
-            description: "allowed values are.."
-            in: query
-            required: true
-            schema:
-              type: string
-          - name: id
-            description: "id"
-            in: query
-            required: true
-            schema:
-              type: integer
-          - name: params
-            description: "params"
-            in: query
-            required: true
-            schema:
-              type: array
-          - name: version
-            description: ""
-            in: query
-            required: true
-            schema:
-              type: string
+        description: ""
+        requestBody:
+          description: ""
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/default"
         responses:
           "400":
             description: Invalid
     /sony/avContent:
-        post:
-          tags:
-              - API
-          parameters:
-          - name: method
-            description: "allowed values are.."
-            in: query
-            required: true
-            schema:
-              type: string
-          - name: id
-            description: "id"
-            in: query
-            required: true
-            schema:
-              type: integer
-          - name: params
-            description: "params"
-            in: query
-            required: true
-            schema:
-              type: array
-          - name: version
-            description: ""
-            in: query
-            required: true
-            schema:
-              type: string
-          responses:
-            "400":
-              description: Invalid
+      post:
+        description: ""
+        requestBody:
+          description: ""
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/default"
+        responses:
+          "400":
+            description: Invalid
+
+            
+  components:
+    schemas:
+      default:
+        type: object
+        properties:
+          method:
+            type: string
+          id:
+            type: string
+            default: "1"
+          params:
+            type: string
+          version:
+            type: string
+            enum:
+              - "1.0"
+              - "1.1"
 contentType: yaml
