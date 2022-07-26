@@ -1,7 +1,7 @@
 _id: spc_2724eeb985794351a9683eacbd2f88d7
 type: ApiSpec
 parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
-modified: 1658844349672
+modified: 1658846556741
 created: 1658480071067
 fileName: API Sony HAP-S1
 contents: >
@@ -34,11 +34,11 @@ contents: >
           description: "port number"
 
   tags:
-    - name: "Volume"
+    - name: "System"
       description: ""
-    - name: "Music"
+    - name: "Audio"
       description: ""
-    - name: "Power"
+    - name: "A/V Content"
       description: ""
 
   paths:
@@ -46,6 +46,7 @@ contents: >
       summary: ""
       description: ""
       post:
+        tags: ["System"]
         description: ""
         requestBody:
           description: ""
@@ -53,12 +54,19 @@ contents: >
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/default"
+                $ref: "#/components/schemas/defaultRequest"
         responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/defaultResponse"
           "400":
             description: Invalid
     /sony/audio:
       post:
+        tags: ["Audio"]
         description: ""
         requestBody:
           description: ""
@@ -66,12 +74,19 @@ contents: >
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/default"
+                $ref: "#/components/schemas/defaultRequest"
         responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/defaultResponse"
           "400":
             description: Invalid
     /sony/avContent:
       post:
+        tags: ["A/V Content"]
         description: ""
         requestBody:
           description: ""
@@ -79,22 +94,28 @@ contents: >
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/default"
+                $ref: "#/components/schemas/defaultRequest"
         responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/defaultResponse"
           "400":
             description: Invalid
 
             
   components:
     schemas:
-      default:
+      defaultRequest:
         type: object
         properties:
           method:
             type: string
           id:
-            type: string
-            default: "1"
+            type: integer
+            default: 1
           params:
             type: string
           version:
@@ -102,4 +123,11 @@ contents: >
             enum:
               - "1.0"
               - "1.1"
+      defaultResponse:
+        type: object
+        properties:
+          result:
+            type: object
+          id:
+            type: integer
 contentType: yaml
