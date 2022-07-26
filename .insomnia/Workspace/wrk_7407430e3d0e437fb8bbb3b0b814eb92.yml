@@ -1,8 +1,12 @@
 _id: wrk_7407430e3d0e437fb8bbb3b0b814eb92
 type: Workspace
 parentId: null
-modified: 1658480071060
+modified: 1658837142106
 created: 1658480071060
 name: New Document
-description: ""
+description: |-
+  # API Sony HAP-S1
+  Sony HAP-S1 is a High-Resolution Audio HDD player.
+
+  There is also a variant called HAP-Z1ES.
 scope: design
