@@ -1,0 +1,45 @@
+_id: req_cb8a812969984de2a2f60a9734795c42
+type: Request
+parentId: fld_be0cd8fd5d814234ab568a0b0c63ae60
+modified: 1658829515365
+created: 1658829462562
+url: http://{{ _.ipaddr }}:{{ _.port }}/sony/audio
+name: set volume level
+description: >-
+  The current power status of the device, or the status to set.
+
+  - "": Changes the power status as if the remote power key is pressed. The power status is device and service dependent.
+
+  - "active": The device is in the power-on state.
+
+  - "off": The device is in the power-off state.
+
+  - "standby": The device is in the standby state. Network functions are active, and the device can switch to the power-on state via a network command.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"method": "setAudioVolume",
+    	"id": 1,
+    	"params": [
+    		{
+    			"volume": "5"
+    		}
+    	],
+    	"version": "1.0"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9f03bf987aff4a249fcd7fb24f3ad60e
+authentication: {}
+metaSortKey: -1658826689910.25
+isPrivate: false
+settingStoreCookies: false
+settingSendCookies: false
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

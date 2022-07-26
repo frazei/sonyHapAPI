@@ -1,0 +1,52 @@
+_id: req_7f49cf4588134715a44bff8daf7b31d7
+type: Request
+parentId: fld_774d5819da014eff908ebcb130dfcd95
+modified: 1658829107164
+created: 1658826689954
+url: http://{{ _.ipaddr }}:{{ _.port }}/sony/system
+name: get power status
+description: >
+  ## status
+
+  The current power status of the device, or the status to set.
+
+  - "": Changes the power status as if the remote power key is pressed. The power status is device and service dependent.
+
+  - "active": The device is in the power-on state.
+
+  - "off": The device is in the power-off state.
+
+  - "standby": The device is in the standby state. Network functions are active, and the device can switch to the power-on state via a network command.
+
+
+  ## standbyDetail
+
+  Additional information for the standby power state. If this value is omitted or "", then no additional information is available.
+
+  - "": No additional information is available.
+
+  - "networkReady": The device is in its normal standby state.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"method": "getPowerStatus",
+    	"id": 1,
+    	"params": [],
+    	"version": "1.1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9f03bf987aff4a249fcd7fb24f3ad60e
+authentication: {}
+metaSortKey: -1658826689954
+isPrivate: false
+settingStoreCookies: false
+settingSendCookies: false
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

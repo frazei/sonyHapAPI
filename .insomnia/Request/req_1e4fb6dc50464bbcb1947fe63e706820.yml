@@ -1,0 +1,41 @@
+_id: req_1e4fb6dc50464bbcb1947fe63e706820
+type: Request
+parentId: fld_a987428f3a464c23bb835b982d0cedb5
+modified: 1658828675256
+created: 1658828656148
+url: http://{{ _.ipaddr }}:{{ _.port }}/sony/avContent
+name: pause/play
+description: >-
+  The current power status of the device, or the status to set.
+
+  - "": Changes the power status as if the remote power key is pressed. The power status is device and service dependent.
+
+  - "active": The device is in the power-on state.
+
+  - "off": The device is in the power-off state.
+
+  - "standby": The device is in the standby state. Network functions are active, and the device can switch to the power-on state via a network command.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"method": "pausePlayingContent",
+    	"id": 1,
+    	"params": [],
+    	"version": "1.0"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9f03bf987aff4a249fcd7fb24f3ad60e
+authentication: {}
+metaSortKey: -1658826689929
+isPrivate: false
+settingStoreCookies: false
+settingSendCookies: false
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

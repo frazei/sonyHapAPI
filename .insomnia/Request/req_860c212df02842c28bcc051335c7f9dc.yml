@@ -1,0 +1,36 @@
+_id: req_860c212df02842c28bcc051335c7f9dc
+type: Request
+parentId: fld_774d5819da014eff908ebcb130dfcd95
+modified: 1658828544581
+created: 1658827313074
+url: http://{{ _.ipaddr }}:{{ _.port }}/sony/system
+name: power off
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"method": "setPowerStatus",
+    	"id": 1,
+    	"params": [
+    		{
+    			"status": "off"
+    		}
+    	],
+    	"version": "1.1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9f03bf987aff4a249fcd7fb24f3ad60e
+authentication: {}
+metaSortKey: -1658826689854
+isPrivate: false
+settingStoreCookies: false
+settingSendCookies: false
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

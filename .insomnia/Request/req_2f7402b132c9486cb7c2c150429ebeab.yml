@@ -1,0 +1,36 @@
+_id: req_2f7402b132c9486cb7c2c150429ebeab
+type: Request
+parentId: fld_774d5819da014eff908ebcb130dfcd95
+modified: 1658829162611
+created: 1658827262507
+url: http://{{ _.ipaddr }}:{{ _.port }}/sony/system
+name: power on
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"method": "setPowerStatus",
+    	"id": 1,
+    	"params": [
+    		{
+    			"status": "active"
+    		}
+    	],
+    	"version": "1.1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9f03bf987aff4a249fcd7fb24f3ad60e
+authentication: {}
+metaSortKey: -1658826689904
+isPrivate: false
+settingStoreCookies: false
+settingSendCookies: false
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
