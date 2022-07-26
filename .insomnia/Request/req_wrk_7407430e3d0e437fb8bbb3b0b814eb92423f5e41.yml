@@ -1,0 +1,33 @@
+_id: req_wrk_7407430e3d0e437fb8bbb3b0b814eb92423f5e41
+type: Request
+parentId: fld_wrk_7407430e3d0e437fb8bbb3b0b814eb92d93d10ff
+modified: 1658836257691
+created: 1658836257691
+url: "{{ base_url }}/sony/audio"
+name: /sony/audio
+description: ""
+method: POST
+body: {}
+parameters:
+  - name: method
+    disabled: false
+    value: string
+  - name: id
+    disabled: false
+    value: "0"
+  - name: params
+    disabled: false
+    value: ""
+  - name: version
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1658836257691
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,8 +1,116 @@
 _id: spc_2724eeb985794351a9683eacbd2f88d7
 type: ApiSpec
 parentId: wrk_7407430e3d0e437fb8bbb3b0b814eb92
-modified: 1658826789470
+modified: 1658836873117
 created: 1658480071067
 fileName: API Sony HAP-S1
-contents: ""
+contents: >-
+  openapi: 3.0.0
+
+  info:
+    description: "Sony HAP-S1 is a High-Resolution Audio HDD player. There is also a variant called HAP-Z1ES."
+    version: 1.0.0
+    title: Sony HAP-S1 API
+
+  tags:
+    - name: API
+      description: ""
+
+  paths:
+    /sony/system:
+      post:
+        tags:
+          - API
+        parameters:
+          - name: method
+            description: "allowed values are.."
+            in: query
+            required: true
+            schema:
+              type: string
+          - name: id
+            description: "id"
+            in: query
+            required: true
+            schema:
+              type: integer
+          - name: params
+            description: "params"
+            in: query
+            required: true
+            schema:
+              type: array
+          - name: version
+            description: ""
+            in: query
+            required: true
+            schema:
+              type: string
+        responses:
+          "400":
+            description: Invalid
+    /sony/audio:
+      post:
+        tags:
+            - API
+        parameters:
+          - name: method
+            description: "allowed values are.."
+            in: query
+            required: true
+            schema:
+              type: string
+          - name: id
+            description: "id"
+            in: query
+            required: true
+            schema:
+              type: integer
+          - name: params
+            description: "params"
+            in: query
+            required: true
+            schema:
+              type: array
+          - name: version
+            description: ""
+            in: query
+            required: true
+            schema:
+              type: string
+        responses:
+          "400":
+            description: Invalid
+    /sony/avContent:
+        post:
+          tags:
+              - API
+          parameters:
+          - name: method
+            description: "allowed values are.."
+            in: query
+            required: true
+            schema:
+              type: string
+          - name: id
+            description: "id"
+            in: query
+            required: true
+            schema:
+              type: integer
+          - name: params
+            description: "params"
+            in: query
+            required: true
+            schema:
+              type: array
+          - name: version
+            description: ""
+            in: query
+            required: true
+            schema:
+              type: string
+          responses:
+            "400":
+              description: Invalid
 contentType: yaml
